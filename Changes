@@ -1,0 +1,10 @@
+Revision history for Perl extension GradebookPlus::Parser.
+
+0.07  Tue Feb  5 19:54:06 2002
+	- bunch of slight fixes since original creation.
+	  i've simply bundled them all into .07 since I
+	  don't remember their exact times
+
+0.01  Fri Jan  4 16:34:02 2002
+	- original version
+

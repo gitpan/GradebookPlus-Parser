@@ -1,0 +1,38 @@
+GradebookPlus/Parser version 0.07
+=================================
+
+DESCRIPTION
+Gradebook is a module useful for parsing Gradebook Plus text reports, 
+a program used by many K-12 school districts.  Simply go to:
+
+Reports->
+Gradebook of entire Class->(check fancy report, catagory totals, and all grades)->
+Save to disk.
+
+The parser can then parse the contents of this file. Use it how you like;
+I use it so teachers can put their grades online with minimal effort on
+their part.  After parsing, you'll have access to everything that was in
+the report.  See the pod for more details.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+NONE
+
+COPYRIGHT AND LICENCE
+
+Put the correct copyright and licence information here.
+
+Copyright (C) 2002 Joseph F. Ryan
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
