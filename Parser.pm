@@ -11,7 +11,7 @@ our @ISA = qw(Exporter);
 # Do not simply export all your public functions/methods/constants.
 
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 sub new
 {
     my $proto = shift;
@@ -547,6 +547,7 @@ sub get_index
 
 "JAPH";
 
+=pod
 
 =head1 NAME
 
@@ -557,7 +558,8 @@ GradebookPlus::Parser
 Parses Gradebook Plus text reports.
 
 =head1 SYNOPSIS
-
+=begin html
+<pre>
 use GradebookPlus::Parser;
 
 # create a new gradbook
@@ -567,16 +569,19 @@ my $gradebook = new GradebookPlus::Parser;
 $gradebook->parse($data);
 
 # do stuff with the methods
-
+</pre>
+=end html
 =head1 DESCRIPTION
 
 Gradebook is a module useful for parsing Gradebook Plus text reports, 
 a program used by many K-12 school districts.  Simply go to 
-
+=begin html
+<pre>
 Reports->
 Gradebook of entire Class->(check fancy report, catagory totals, and all grades)->
 Save to disk.
-
+</pre>
+=end html
 The parser can then parse the contents of this file.
 Use it how you like; I use it so teachers can put their grades
 online with minimal effort on their part.   
@@ -598,11 +603,13 @@ Returns the name of the report, if you happen want it.
 
 Returns a list of students in the report.  Each element
 is a reference to an anonymous hash with 3 elements:
-
+=begin html
+<pre>
 first
 last
 pw
-
+</pre>
+=end html
 pw is a generated password which you can use, rather than
 create your own.  Remember, this module was developed for
 use with an online grade report system.
@@ -630,35 +637,45 @@ Returns total possible points for the class
 Returns * for the given assignment name  The exception is
 assignment_names, which does not take an argument and returns
 a list of all assignment names.
+=begin html
+<pre>
 List of methods:
 assignment_names
 assignment_possible
 assignment_scores
 assignment_average
+</pre>
+=end html
 
 =item catagory_*($catagory_name)
 
 Returns * for the given catagory name  The exception is
 catagory_names, which does not take an argument and returns
 a list of all catagory names.
+=begin html
+<pre>
 List of methods:
 catagory_names
 catagory_possible
 catagory_scores
 catagory_average
-
+</pre>
+=end html
 =item student_*($first, $last)
 
 Returns * for the given student.  The exceptions are with
 student_assignments and student_catagories, which return an
 array of all scores in the same order as @assignment_names.
+=begin html
+<pre>
 List of methods:
 student_assignments
 student_catagories
 student_total_points
 student_percent
 student_letter
-
+</pre>
+=end html
 =head1 AUTHOR
 
 Joseph F. Ryan, ryan.311@osu.edu
